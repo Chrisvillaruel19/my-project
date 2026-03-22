@@ -7,10 +7,14 @@ export function Header() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <div>
-            <img src="" alt="" />
+            <img 
+              src="/chris.png" 
+              alt="Logo" 
+              className="rounded-full w-25 h-25"
+/>
           </div>
-          <nav>
-            <ul className="flex items-center gap-6">
+          <nav className="flex items-center gap-20">
+            <ul className="flex items-center gap-20 ">
               <li>
                 <Link href="/">Home</Link>
               </li>
@@ -24,12 +28,11 @@ export function Header() {
                 <Link href="/blog">Contact</Link>
               </li>
             </ul>
-          </nav>
-    
-          <div className="flex items-center gap-4">
+             <div>
             <ThemeToggle />
 
           </div>
+          </nav>
         </div>
       </div>
     </header>

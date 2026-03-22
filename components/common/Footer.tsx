@@ -19,15 +19,6 @@ export function Footer() {
             </ul>
           </div>
 
-
-          <div>
-            <h2 className="font-bold mb-4">Blogs</h2>
-            <ul className="flex flex-col gap-2">
-              <li><Link href="/">Blog 1</Link></li>
-              <li><Link href="/about">Blog 2</Link></li>
-              <li><Link href="/projects">Blog 3</Link></li>
-            </ul>
-          </div>
           <div>
             <h2 className="font-bold mb-4">Contact Info</h2>
             <ul className="flex flex-col gap-2">
