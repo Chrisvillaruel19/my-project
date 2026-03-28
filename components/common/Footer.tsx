@@ -6,7 +6,7 @@ export function Footer() {
   <footer className="border-t border-gray-200 dark:border-gray-800 py-10 bg-white/70 dark:bg-black/70 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6">
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="flex items-center justify-between px-6 py-3 ">
 
           
             <div>
@@ -33,6 +33,7 @@ export function Footer() {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About</Link></li>
                 <li><Link href="/project">Projects</Link></li>
+                <li><Link href="contact">Contact</Link></li>
               </ul>
             </div>
 
@@ -41,9 +42,9 @@ export function Footer() {
               <h2 className="font-bold text-lg mb-4">Follow Me</h2>
 
               <div className="flex gap-4">
-                <Facebook className="cursor-pointer hover:text-blue-500" />
-                <Github className="cursor-pointer hover:text-gray-900" />
-                <Instagram className="cursor-pointer hover:text-pink-500" />
+                <Facebook className="cursor-pointer text-blue-500" />
+                <Github className="cursor-pointer text-gray-900" />
+                <Instagram className="cursor-pointer text-pink-500" />
               </div>
             </div>
 

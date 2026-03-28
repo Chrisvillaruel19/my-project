@@ -15,13 +15,13 @@ export function Header() {
           />
 
           <h1 className="text-base font-semibold tracking-widest uppercase bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-            Profile
+            Ni
           </h1>
         </div>
 
       
         <nav className="hidden md:flex">
-          <ul className="flex items-center gap-10 text-sm font-medium">
+          <ul className="flex items-center gap-20 text-sm font-medium">
             <li>
               <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition duration-300">
                 Home
