@@ -1,63 +1,60 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">    
+      <div className="container mx-auto flex h-16 items-center justify-between px-6">
 
-      <div className="relative z-10 container mx-auto flex h-14 items-center justify-between gap-4 bg-background px-4 sm:px-6">
-
-        {/* 🔹 LEFT - LOGO */}
         <div className="flex items-center gap-3">
-          <img
+          
+          <Image
             src="/chris.png"
             alt="Logo"
-            className="w-10 h-10 rounded-full object-cover ring-2 ring-gray-300 dark:ring-gray-700"
+            width={40}
+            height={40}
+            className="rounded-full object-cover ring-2 ring-border"
           />
 
-          <h1 className="text-lg font-semibold tracking-wide bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-            Niño
-          </h1>
+          {/* Name + Role */}
+          <div className="leading-tight">
+            <h1 className="text-sm font-semibold tracking-wide bg-gradient-to-r from-primary to-purple-500 text-transparent bg-clip-text">
+              Niño Villaruel
+            </h1>
+            <p className="text-[11px] text-muted-foreground">
+              Frontend Developer
+            </p>
+          </div>
         </div>
 
-        {/* 🔹 CENTER - NAV */}
-        <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
-          <ul className="flex items-center gap-10 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          
+          {[
+            { name: "Home", href: "/" },
+            { name: "About", href: "/about" },
+            { name: "Projects", href: "/project" },
+            { name: "Contact", href: "/contact" },
+          ].map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="relative group text-muted-foreground hover:text-foreground transition-colors duration-300"
+            >
+              {item.name}
 
-            <li>
-              <Link href="/" className="hover:text-blue-500 transition">
-                Home
-              </Link>
-            </li>
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+            </Link>
+          ))}
 
-            <li>
-              <Link href="/about" className="hover:text-blue-500 transition">
-                About
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/projects" className="hover:text-blue-500 transition">
-                Projects
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/contact" className="hover:text-blue-500 transition">
-                Contact
-              </Link>
-            </li>
-
-          </ul>
         </nav>
 
-        {/* 🔹 RIGHT - THEME */}
-        <div>
+       
+        <div className="flex items-center gap-3">
           <ThemeToggle />
         </div>
 
       </div>
-
     </header>
   );
 }

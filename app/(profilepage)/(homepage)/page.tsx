@@ -5,7 +5,7 @@ import { CTASection } from "@/components/features/home/CTASection";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="space-y-24">
 
       <HeroSection />
       <SkillsSection />
