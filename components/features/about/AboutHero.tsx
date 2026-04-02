@@ -8,11 +8,11 @@ export function AboutHero() {
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           
-          {/* Profile Picture */}
+          
           <div className="flex justify-center">
             <div className="relative w-[360px] h-[360px]">
               <Image
-                src="/profile.jfif"
+                src="/profile.jpg"
                 alt="Nino Christopher Villaruel"
                 fill
                 className="rounded-full object-cover shadow-2xl border-8 border-background"

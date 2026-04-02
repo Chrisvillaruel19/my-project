@@ -14,7 +14,7 @@ export function HeroSection() {
         <div className="flex justify-center md:justify-end">
           <div className="relative">
             <Image
-              src="/profile.jfif"
+              src="/profile.jpg"
               alt="Nino Christopher Villaruel"
               width={360}
               height={360}
